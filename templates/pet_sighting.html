@@ -1,0 +1,11 @@
+<h2>📍 Sighting Reports for {{ pet.pet_type }} - {{ pet.breed }}</h2>
+
+{% for r in reports %}
+<div class="card p-3 mb-3">
+    <b>Reporter:</b> {{ r.reporter }} <br>
+    <b>Message:</b> {{ r.message }} <br>
+    <small>{{ r.created_at }}</small>
+</div>
+{% empty %}
+<p>No sightings yet.</p>
+{% endfor %}
